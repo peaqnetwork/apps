@@ -24,6 +24,7 @@ import chainKintsugi from './chains/kintsugi.png';
 import chainKusama from './chains/kusama-128.gif';
 import chainOpal from './chains/opal-logo.png';
 import chainParallel from './chains/parallel.svg';
+import chainPeaq from './chains/peaq.svg';
 import chainComposable from './chains/picasso.svg';
 import chainQuartz from './chains/quartz.png';
 import chainRococo from './chains/rococo.svg';
@@ -110,6 +111,7 @@ import nodePangolin from './nodes/pangolin.svg';
 import nodePangoro from './nodes/pangoro.svg';
 import nodeParallel from './nodes/parallel.svg';
 import nodeParami from './nodes/parami.png';
+import nodePeaq from './nodes/peaq.svg';
 import nodePhala from './nodes/phala.svg';
 import nodePhoenix from './nodes/phoenix.png';
 import nodePichiu from './nodes/pichiu.png';
@@ -248,6 +250,7 @@ export const chainLogos = Object.entries({
   Parallel: chainParallel,
   'Parallel Heiko': chainParallel,
   'Parami PC2': nodeParami,
+  'PEAQ-testnet': chainPeaq,
   'Phala PC1': nodePhala,
   'PHOENIX PC1': nodePhoenix,
   'Pichiu Testnet': nodePichiu,
@@ -390,6 +393,7 @@ export const nodeLogos = Object.entries({
   Parami: nodeParami,
   'parity-polkadot': nodePolkadot,
   'Patract Node': nodeJupiter,
+  'PEAQ-testnet': nodePeaq,
   'Phala Collator': nodePhala,
   'phala-substrate-node': nodePhala,
   'PHOENIX Collator': nodePhoenix,
@@ -557,6 +561,7 @@ export const namedLogos: Record<string, unknown> = {
   pangolin: nodePangolin,
   pangoro: nodePangoro,
   parallel: chainParallel,
+  'PEAQ-testnet': chainPeaq,
   phala: nodePhala,
   phoenix: nodePhoenix,
   picasso: chainComposable,

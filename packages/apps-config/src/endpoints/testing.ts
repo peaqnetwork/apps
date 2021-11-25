@@ -338,6 +338,13 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       }
     },
     {
+      info: 'PEAQ-testnet',
+      text: t('rpc.test.peaq', 'PEAQ', { ns: 'apps-config' }),
+      providers: {
+        Interlay: 'wss://fn1.test.peaq.network/'
+      }
+    },
+    {
       info: 'phoenix',
       isDisabled: true, // https://github.com/polkadot-js/apps/issues/6181
       text: t('rpc.test.phoenix', 'Phoenix Mashnet', { ns: 'apps-config' }),
