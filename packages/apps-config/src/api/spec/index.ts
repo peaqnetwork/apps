@@ -1,14 +1,16 @@
-// Copyright 2017-2021 @polkadot/apps-config authors & contributors
+// Copyright 2017-2022 @polkadot/apps-config authors & contributors
 // SPDX-License-Identifier: Apache-2.0
 
 import type { OverrideBundleDefinition } from '@polkadot/types/types';
 
 import acala from './acala';
+import ajuna from './ajuna';
 import altair from './altair';
 import apron from './apron';
 import aresGladios from './ares-gladios';
 import aresParachain from './ares-parachain';
 import astar from './astar';
+import automata from './automata';
 import basilisk from './basilisk';
 import beresheet from './beresheet';
 import bifrost from './bifrost';
@@ -18,10 +20,13 @@ import bitcountry from './bitcountry';
 import bitcountryPioneer from './bitcountry-pioneer';
 import bitcountryParachain from './bitcountry-rococo';
 import canvas from './canvas';
+import centrifuge from './centrifuge';
 import centrifugeChain from './centrifuge-chain';
 import chainx from './chainx';
 import clover from './clover';
 import cloverRococo from './clover-rococo';
+import coinversation from './coinversation';
+import competitorsClub from './competitors-club';
 import crab from './crab';
 import crownSterlingChain from './crown-sterling';
 import crust from './crust';
@@ -31,7 +36,6 @@ import datahighwayParachain from './datahighway';
 import dockMainnet from './dock-mainnet';
 import dockTestnet from './dock-testnet';
 import dotmog from './dotmog';
-import dusty from './dusty';
 import eave from './eave';
 import edgeware from './edgeware';
 import encointerNodeNotee from './encointer-node-notee';
@@ -57,6 +61,7 @@ import kilt from './kilt';
 import konomi from './konomi';
 import kpron from './kpron';
 import kulupu from './kulupu';
+import kusari from './kusari';
 import kylin from './kylin';
 import laminar from './laminar';
 import litentry from './litentry';
@@ -65,9 +70,10 @@ import mathchain from './mathchain';
 import moonbeam from './moonbeam';
 import mybank from './mybank';
 import neatcoin from './neatcoin';
+import neumann from './neumann';
 import nftmart from './nftmart';
 import nodle from './nodle';
-import oakTestnet from './oak-testnet';
+import opal from './opal';
 import opportunity from './opportunity';
 import origintrail from './origintrail';
 import pangolin from './pangolin';
@@ -86,6 +92,7 @@ import quartz from './quartz';
 import realis from './realis';
 import riochain from './riochain';
 import robonomics from './robonomics';
+import shibuya from './shibuya';
 import shiden from './shiden';
 import snowbridge from './snowbridge';
 import soraSubstrate from './soraSubstrate';
@@ -97,11 +104,11 @@ import subgame from './subgame';
 import subsocial from './subsocial';
 import subspace from './subspace';
 import substrateContractsNode from './substrateContractsNode';
+import swapdex from './swapdex';
 import ternoa from './ternoa';
 import trustbase from './trustbase';
 import uart from './uart';
 import unique from './unique';
-import uniqueWestend from './unique-westend';
 import unitv from './unitv';
 import vln from './vln';
 import vlnrococo from './vln-rococo';
@@ -126,12 +133,14 @@ const spec: Record<string, OverrideBundleDefinition> = {
   VLN: vln,
   'VLN-PC': vlnrococo,
   ...acala,
+  ajuna,
   altair,
   apron,
   'ares-gladios': aresGladios,
   'ares-parachain': aresParachain,
   asgard: bifrostAsgard,
   astar,
+  automata: automata,
   basilisk,
   beresheet,
   bifrost: bifrost,
@@ -139,11 +148,15 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'bitcountry-node': bitcountry,
   'bitcountry-parachain': bitcountryParachain,
   canvas,
+  centrifuge,
   'centrifuge-chain': centrifugeChain,
   chainx,
   'chainx-parachain': chainx,
   clover,
   'clover-rococo': cloverRococo,
+  coinversation,
+  'competitors-club': competitorsClub,
+  contextfree: automata,
   'crown-sterling': crownSterlingChain,
   crust,
   'crust-parachain': crust,
@@ -156,7 +169,6 @@ const spec: Record<string, OverrideBundleDefinition> = {
   'dock-pos-main-runtime': dockMainnet,
   'dock-pos-test-runtime': dockTestnet,
   'dotmog-node': dotmog,
-  dusty4: dusty,
   edgeware,
   'encointer-node-notee': encointerNodeNotee,
   'encointer-node-teeproxy': encointerNodeTeeproxy,
@@ -184,6 +196,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   konomi,
   kpron,
   kulupu,
+  kusari,
   kylin,
   laminar,
   litentry,
@@ -197,13 +210,13 @@ const spec: Record<string, OverrideBundleDefinition> = {
   moonshadow: moonbeam,
   'mybank.network Testnet': mybank,
   neatcoin,
+  neumann,
   nft: unique,
   nftmart,
   'node-moonbeam': moonbeam,
   'node-polkadex': polkadex,
   'nodle-chain': nodle,
-  'oak-testnet': oakTestnet,
-  opal: uniqueWestend,
+  opal: opal,
   opportunity,
   'origintrail-parachain': origintrail,
   parallel,
@@ -220,9 +233,11 @@ const spec: Record<string, OverrideBundleDefinition> = {
   realis,
   'riochain-runtime': riochain,
   robonomics,
+  shibuya,
   shiden,
   snowbridge,
   'sora-substrate': soraSubstrate,
+  sora_ksm: soraSubstrate,
   spanner,
   stafi,
   standard,
@@ -230,9 +245,10 @@ const spec: Record<string, OverrideBundleDefinition> = {
   subdao,
   subgame,
   subsocial,
-  subspace: subspace,
+  subspace,
   'substrate-contracts-node': substrateContractsNode,
   subzero: zero,
+  swapdex,
   ternoa,
   trustbase,
   uart,
