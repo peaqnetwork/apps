@@ -29,7 +29,7 @@ COPY env.sh .
 RUN apk add --no-cache bash; chmod +x env.sh
 
 COPY docker/nginx.conf /etc/nginx/nginx.conf
-#COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=builder /apps/packages/apps/build /usr/share/nginx/html
 
 EXPOSE 80
