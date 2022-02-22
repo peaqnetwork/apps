@@ -19,7 +19,7 @@ spec:
               memory: 1024Mi
             limits:
               cpu: 400m
-              memory: 2048Mi
+              memory: 3072Mi
           workingDir: /workspace/source
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
