@@ -69,9 +69,9 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
     },
     {
       info: 'bifrost',
-      text: t('rpc.test.bifrost', 'Bifrost', { ns: 'apps-config' }),
+      text: t('rpc.test.bifrost', 'Bifrost Stage Network', { ns: 'apps-config' }),
       providers: {
-        Liebi: 'wss://asgard-rpc.liebi.com/ws'
+        Liebi: 'wss://bifrost-rpc.testnet.liebi.com/ws'
       }
     },
     {
@@ -104,8 +104,8 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       text: t('rpc.test.crust.network', 'Crust Maxwell', { ns: 'apps-config' }),
       providers: {
         'Crust Network': 'wss://api.crust.network/',
-        'DCloud Foundation': 'wss://api.decloudf.com/',
-        Pinknode: 'wss://rpc.pinknode.io/maxwell/explorer'
+        'DCloud Foundation': 'wss://api.decloudf.com/'
+        // Pinknode: 'wss://rpc.pinknode.io/maxwell/explorer' // https://github.com/polkadot-js/apps/issues/7058
       }
     },
     {
@@ -187,6 +187,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
     },
     {
       info: 'gamepower',
+      isDisabled: true, // https://github.com/polkadot-js/apps/issues/7223
       text: t('rpc.test.gamepower', 'GamePower', { ns: 'apps-config' }),
       providers: {
         GamePower: 'wss://gamepower.io'
@@ -222,6 +223,13 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
         'IPSE China': 'wss://testnet-china.ipse.io',
         'IPSE USA': 'wss://testnet-usa.ipse.io',
         'IPSE Europe': 'wss://testnet-europe.ipse.io'
+      }
+    },
+    {
+      info: 'joystream',
+      text: t('rpc.test.joystream', 'Joystream', { ns: 'apps-config' }),
+      providers: {
+        Jsgenesis: 'wss://rpc.joystream.org:9944'
       }
     },
     {
@@ -292,12 +300,19 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       }
     },
     {
+      info: 'minix',
+      text: t('rpc.test.minix', 'MiniX Testnet', { ns: 'apps-config' }),
+      providers: {
+        Chainx: 'wss://minichain.coming.chat/ws'
+      }
+    },
+    {
       info: 'moonbaseAlpha',
       text: t('rpc.test.moonbeam', 'Moonbase Alpha', { ns: 'apps-config' }),
       providers: {
         'Moonbeam Foundation': 'wss://wss.api.moonbase.moonbeam.network',
-        OnFinality: 'wss://moonbeam-alpha.api.onfinality.io/public-ws',
-        Pinknode: 'wss://rpc.pinknode.io/alphanet/explorer'
+        OnFinality: 'wss://moonbeam-alpha.api.onfinality.io/public-ws'
+        // Pinknode: 'wss://rpc.pinknode.io/alphanet/explorer' // https://github.com/polkadot-js/apps/issues/7058
       }
     },
     {
@@ -312,6 +327,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       info: 'neumann',
       text: t('rpc.test.oak', 'Neumann Network', { ns: 'apps-config' }),
       providers: {
+        OAK: 'wss://rpc.testnet.oak.tech',
         OnFinality: 'wss://neumann.api.onfinality.io/public-ws'
       }
     },
@@ -332,7 +348,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
     },
     {
       info: 'opportunity',
-      isDisabled: true, // https://github.com/polkadot-js/apps/issues/6935
+      isDisabled: false,
       text: t('rpc.test.opportunity', 'Opportunity', { ns: 'apps-config' }),
       providers: {
         'Standard Protocol': 'wss://rpc.opportunity.standard.tech'
@@ -400,7 +416,8 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       info: 'pontem',
       text: t('rpc.test.pontem', 'Pontem', { ns: 'apps-config' }),
       providers: {
-        Pontem: 'wss://testnet.pontem.network/ws'
+        Pontem: 'wss://testnet.pontem.network/ws',
+        OnFinality: 'wss://pontem-testnet.api.onfinality.io/public-ws'
       }
     },
     {
@@ -448,6 +465,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
     },
     {
       info: 'sora-substrate',
+      isDisabled: true, // https://github.com/polkadot-js/apps/issues/7093
       text: t('rpc.test.sora-substrate-staging', 'SORA-staging', { ns: 'apps-config' }),
       providers: {
         Soramitsu: 'wss://ws.stage.sora2.soramitsu.co.jp'
