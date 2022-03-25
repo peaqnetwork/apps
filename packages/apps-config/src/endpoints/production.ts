@@ -37,7 +37,8 @@ export function createProduction (t: TFunction, firstOnly: boolean, withSort: bo
       info: 'centrifuge',
       text: t('rpc.prod.centrifuge', 'Centrifuge', { ns: 'apps-config' }),
       providers: {
-        Centrifuge: 'wss://fullnode.centrifuge.io'
+        Centrifuge: 'wss://fullnode.centrifuge.io',
+        Dwellir: 'wss://centrifuge-rpc.dwellir.com'
       }
     },
     {
@@ -73,10 +74,10 @@ export function createProduction (t: TFunction, firstOnly: boolean, withSort: bo
     },
     {
       info: 'crust',
-      isDisabled: true, // https://github.com/polkadot-js/apps/pull/6761
       text: t('rpc.prod.crust', 'Crust Network', { ns: 'apps-config' }),
       providers: {
-        'Crust Network': 'wss://rpc.crust.network'
+        'Crust Network': 'wss://rpc.crust.network',
+        OnFinality: 'wss://crust.api.onfinality.io/public-ws'
       }
     },
     {
@@ -121,6 +122,7 @@ export function createProduction (t: TFunction, firstOnly: boolean, withSort: bo
     },
     {
       info: 'equilibrium',
+      isDisabled: true, // https://github.com/polkadot-js/apps/issues/7219
       text: t('rpc.prod.equilibrium', 'Equilibrium', { ns: 'apps-config' }),
       providers: {
         Equilibrium: 'wss://node.equilibrium.io'
@@ -154,7 +156,8 @@ export function createProduction (t: TFunction, firstOnly: boolean, withSort: bo
       info: 'integritee',
       text: t('rpc.prod.integritee', 'Integritee Network', { ns: 'apps-config' }),
       providers: {
-        Integritee: 'wss://api.solo.integritee.io'
+        Integritee: 'wss://api.solo.integritee.io',
+        OnFinality: 'wss://integritee.api.onfinality.io/public-ws'
       }
     },
     {
@@ -178,6 +181,14 @@ export function createProduction (t: TFunction, firstOnly: boolean, withSort: bo
       providers: {
         MathWallet: 'wss://mathchain-asia.maiziqianbao.net/ws',
         'MathWallet Backup': 'wss://mathchain-us.maiziqianbao.net/ws'
+      }
+    },
+    {
+      info: 'minix',
+      isDisabled: true, // https://github.com/polkadot-js/apps/issues/7182
+      text: t('rpc.prod.minix', 'MiniX', { ns: 'apps-config' }),
+      providers: {
+        ChainX: 'wss://minichain-mainnet.coming.chat/ws'
       }
     },
     {

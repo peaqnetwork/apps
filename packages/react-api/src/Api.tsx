@@ -128,8 +128,9 @@ async function loadOnReady (api: ApiPromise, endpoint: LinkOption | null, inject
   registry.register(types);
 
   const { injectedAccounts, properties, systemChain, systemChainType, systemName, systemVersion } = await retrieve(api, injectedPromise);
+  const chainSS58 = properties.ss58Format.unwrapOr(DEFAULT_SS58).toNumber();
   const ss58Format = settings.prefix === -1
-    ? properties.ss58Format.unwrapOr(DEFAULT_SS58).toNumber()
+    ? chainSS58
     : settings.prefix;
   const tokenSymbol = properties.tokenSymbol.unwrapOr([formatBalance.getDefaults().unit, ...DEFAULT_AUX]);
   const tokenDecimals = properties.tokenDecimals.unwrapOr([DEFAULT_DECIMALS]);
@@ -170,6 +171,7 @@ async function loadOnReady (api: ApiPromise, endpoint: LinkOption | null, inject
   return {
     apiDefaultTx,
     apiDefaultTxSudo,
+    chainSS58,
     hasInjectedAccounts: injectedAccounts.length !== 0,
     isApiReady: true,
     isDevelopment: isEthereum ? false : isDevelopment,
@@ -205,18 +207,18 @@ function Api ({ apiUrl, children, isElectron, store }: Props): React.ReactElemen
 
   // initial initialization
   useEffect((): void => {
-    let provider;
-
-    if (apiUrl.startsWith('light://')) {
-      provider = new ScProvider(apiUrl.replace('light://substrate-connect/', '') as SupportedChains);
-    } else {
-      provider = new WsProvider(apiUrl);
-    }
-
-    const signer = new ApiSigner(registry, queuePayload, queueSetTxStatus);
     const types = getDevTypes();
 
-    api = new ApiPromise({ provider, registry, signer, types, typesBundle, typesChain });
+    api = new ApiPromise({
+      provider: apiUrl.startsWith('light://')
+        ? new ScProvider(apiUrl.replace('light://substrate-connect/', '') as SupportedChains)
+        : new WsProvider(apiUrl),
+      registry,
+      signer: new ApiSigner(registry, queuePayload, queueSetTxStatus),
+      types,
+      typesBundle,
+      typesChain
+    });
 
     api.on('connected', () => setIsApiConnected(true));
     api.on('disconnected', () => setIsApiConnected(false));
