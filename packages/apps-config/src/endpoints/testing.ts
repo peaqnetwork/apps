@@ -379,7 +379,7 @@ export function createTesting (t: TFunction, firstOnly: boolean, withSort: boole
       info: 'PEAQ-testnet',
       text: t('rpc.test.peaq', 'PEAQ', { ns: 'apps-config' }),
       providers: {
-        Interlay: 'wss://wss.test.peaq.network/'
+        Interlay: 'wss://wss.agung.peaq.network/'
       }
     },
     {
