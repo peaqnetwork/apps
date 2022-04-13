@@ -16,13 +16,13 @@ spec:
                 value: /tekton/home/npm/.npmrc
             image: uses:jenkins-x/jx3-pipeline-catalog/tasks/javascript/release.yaml@versionStream
             name: ""
-            resources:
-              requests:
-                cpu: 50m
-                memory: 2048Mi
-              limits:
-                cpu: 100m
-                memory: 3072Mi
+            # resources:
+            #   requests:
+            #     cpu: 50m
+            #     memory: 2048Mi
+            #   limits:
+            #     cpu: 100m
+            #     memory: 3072Mi
             volumeMounts:
               - mountPath: /tekton/home/npm
                 name: npmrc

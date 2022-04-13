@@ -13,13 +13,13 @@ spec:
         stepTemplate:
           image: uses:jenkins-x/jx3-pipeline-catalog/tasks/javascript/pullrequest.yaml@versionStream
           name: ""
-          resources:
-            requests:
-              cpu: 50m
-              memory: 1024Mi
-            limits:
-              cpu: 100m
-              memory: 3072Mi
+          # resources:
+          #   requests:
+          #     cpu: 50m
+          #     memory: 1024Mi
+          #   limits:
+          #     cpu: 100m
+          #     memory: 3072Mi
           workingDir: /workspace/source
         steps:
         - image: uses:jenkins-x/jx3-pipeline-catalog/tasks/git-clone/git-clone-pr.yaml@versionStream
