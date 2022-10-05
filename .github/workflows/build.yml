@@ -6,7 +6,7 @@ on:
       - feat/1202927578158513_add-code-quality-check
 jobs:
   build:
-    name: Build
+    name: QualityGate
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
