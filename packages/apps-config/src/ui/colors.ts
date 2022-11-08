@@ -73,6 +73,27 @@ const chainKhala = '#03f3f3';
 const chainKintsugi = '#1a0a2d';
 const chainKlug = '#000000';
 const chainKulupu = '#003366';
+const chainMinix = '#5152f7';
+const chainManta = '#2070a6';
+const chainMangata = '#ddf1f3';
+const chainMoonrock = '#3d1d5a';
+const chainMoonsama = '#000000';
+const chainNeumann = '#A8278C';
+const chainNFTMart = '#815287';
+const chainPangolin = '#5744ff';
+const chainPangoro = '#5745de';
+const chainParallel = '#ef18ac';
+const chainParami = '#ee06e2';
+const chainPeaq = '#131416';
+const chainPhala = '#a7e300';
+const chainPhoenix = '#d42181';
+const chainPlasm = '#2096F3';
+const chainPolkadex = '#7C30DD';
+const chainPolkadot = '#e6007a';
+const chainPolkaFoundry = '#ff527c';
+const chainPolkaSmith = '#0DDDFB';
+const chainPontem = '#A92FAC';
+const chainPrism = 'linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)';
 const chainKico = '#29B58D';
 const chainKilt = '#8c145a';
 const chainKiltDev = '#f05a27';
@@ -218,6 +239,7 @@ const nodePangolin = '#4B30DD';
 const nodePangoro = '#4B30DD';
 const nodeParallel = '#ef18ac';
 const nodeParami = '#ee06e2';
+const nodePeaq = '#131416';
 const nodePichiu = '#ed007e';
 const nodePolkadex = '#7C30DD';
 const nodePolymesh = '#1348e4';
@@ -414,6 +436,7 @@ export const chainColors: Record<string, string> = Object.entries({
   Parallel: chainParallel,
   'Parallel Heiko': chainHeiko,
   'Parami PC2': chainParami,
+  'PEAQ-testnet': chainPeaq,
   Phala: chainPhala,
   PHOENIX: chainPhoenix,
   Picasso: chainPicasso,
@@ -567,6 +590,7 @@ export const nodeColors = Object.entries({
   'Parallel Heiko': nodeHeiko,
   'Parami Collator': nodeParami,
   'Patract Node': nodeJupiter,
+  'PEAQ-testnet': nodePeaq,
   'Pichiu Parachain Collator': nodePichiu,
   'Polkadex Node': nodePolkadex,
   'Polymesh Node': nodePolymesh,

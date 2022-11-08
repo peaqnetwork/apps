@@ -410,6 +410,13 @@ export const testChains: EndpointOption[] = [
     }
   },
   {
+    info: 'PEAQ-testnet',
+    text: 'PEAQ',
+    providers: {
+      'PEAQ': 'wss://wss.agung.peaq.network/'
+    }
+  },
+  {
     info: 'phoenix',
     text: 'Phoenix Mashnet',
     providers: {
