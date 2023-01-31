@@ -37,7 +37,7 @@ function extractAuthor (
     (log) => log.isPreRuntime && log.asPreRuntime[0].toString() === 'SUB_'
   );
 
-  if (!preRuntimes || preRuntimes.length === 0) {
+  if (!preRuntimes || !preRuntimes.length) {
     return undefined;
   }
 
