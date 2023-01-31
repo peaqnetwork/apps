@@ -168,14 +168,12 @@ function createWebpack (context, mode = 'production') {
       })
     ].concat(plugins),
     resolve: {
-      alias: {
-        ...alias,
-        'react/jsx-runtime': require.resolve('react/jsx-runtime')
-      },
+      alias,
       extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx'],
       fallback: {
         assert: require.resolve('assert/'),
         crypto: require.resolve('crypto-browserify'),
+        fs: false,
         http: require.resolve('stream-http'),
         https: require.resolve('https-browserify'),
         os: require.resolve('os-browserify/browser'),
