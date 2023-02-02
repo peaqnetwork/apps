@@ -519,6 +519,13 @@ export const prodParasKusama: EndpointOption[] = [
       Dwellir: 'wss://zeitgeist-rpc.dwellir.com',
       OnFinality: 'wss://zeitgeist.api.onfinality.io/public-ws'
     }
+  },
+  {
+    info: 'PEAQ-testnet',
+    homepage: 'https://www.peaq.network/',
+    paraId: 2241,
+    text: 'Agung',
+    providers: {}
   }
 ];
 
