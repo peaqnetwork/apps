@@ -15,6 +15,7 @@ import bajun from './bajun';
 import basilisk from './basilisk';
 import beresheet from './beresheet';
 import bifrost from './bifrost';
+import peaq from './peaq';
 import bifrostAsgard from './bifrost-asgard';
 import bifrostParachain from './bifrost-parachain';
 import bitcountry from './bitcountry';
@@ -155,6 +156,7 @@ const spec: Record<string, OverrideBundleDefinition> = {
   basilisk,
   beresheet,
   bifrost,
+  'peaq-node-dev': peaq,
   'bifrost-parachain': bifrostParachain,
   'bitcountry-node': bitcountry,
   'bitcountry-parachain': bitcountryParachain,
