@@ -521,10 +521,10 @@ export const prodParasKusama: EndpointOption[] = [
     }
   },
   {
-    info: 'PEAQ-testnet',
-    homepage: 'https://www.peaq.network/',
+    info: 'Krest',
+    homepage: 'https://krest.peaq.network/',
     paraId: 2241,
-    text: 'Agung',
+    text: 'Krest',
     providers: {}
   }
 ];
