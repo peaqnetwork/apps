@@ -519,6 +519,13 @@ export const prodParasKusama: EndpointOption[] = [
       Dwellir: 'wss://zeitgeist-rpc.dwellir.com',
       OnFinality: 'wss://zeitgeist.api.onfinality.io/public-ws'
     }
+  },
+  {
+    info: 'Krest',
+    homepage: 'https://krest.peaq.network/',
+    paraId: 2241,
+    text: 'Krest',
+    providers: {}
   }
 ];
 

@@ -51,6 +51,7 @@ import chainOriginTrail from './chains/origintrail.png';
 import chainOriginTrailTestnet from './chains/origintrail-testnet.png';
 import chainParallel from './chains/parallel.svg';
 import chainPeaq from './chains/peaq.svg';
+import chainKrest from './chains/krest.png';
 import chainPicasso from './chains/picasso.svg';
 import chainQuartz from './chains/quartz.png';
 import chainRocfinity from './chains/rocfinity.svg';
@@ -385,6 +386,7 @@ export const chainLogos = Object.entries({
   'Parallel Heiko Dev': chainParallel,
   'Parami PC2': nodeParami,
   'PEAQ-testnet': chainPeaq,
+  'Krest': chainKrest,
   Phala: nodePhala,
   'PHOENIX PC1': nodePhoenix,
   Picasso: chainPicasso,
@@ -812,6 +814,7 @@ export const namedLogos: Record<string, unknown> = {
   pangoro: nodePangoro,
   parallel: chainParallel,
   'PEAQ-testnet': chainPeaq,
+  'Krest': chainKrest,
   phala: nodePhala,
   phoenix: nodePhoenix,
   picasso: chainPicasso,
