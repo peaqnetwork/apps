@@ -27365,6 +27365,32 @@ export const typesBundle = {
             "method": "readAttribute",
             "section": "peaqdid"
           }
+        },
+        "peaqstorage": {
+          "readAttribute": {
+            "description": "Read attribute",
+            "params": [
+              {
+                "name": "didAccount",
+                "type": "AccountId"
+              },
+              {
+                "name": "itemType",
+                "type": "Bytes"
+              },
+              {
+                "name": "at",
+                "type": "BlockHash",
+                "isHistoric": true,
+                "isOptional": true
+              }
+            ],
+            "type": "Option<StorageRpcResult>",
+            "isSubscription": false,
+            "jsonrpc": "peaqstorage_readAttribute",
+            "method": "readAttribute",
+            "section": "peaqstorage"
+          }
         }
       },
       "types": [
@@ -27450,6 +27476,9 @@ export const typesBundle = {
               "value": "Bytes",
               "validity": "Bytes",
               "created": "Moment"
+            },
+            "StorageRpcResult": {
+              "item": "Bytes"
             },
             "Keys": "SessionKeys1"
           }
